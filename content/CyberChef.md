@@ -1,0 +1,3 @@
+CyberChef is going to be your best friend, so it gets its own page..
+
+You can do alot....

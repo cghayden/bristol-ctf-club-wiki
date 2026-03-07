@@ -1,0 +1,77 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+@use "themes";
+
+// Base font size override
+:root {
+  font-size: 14px;
+}
+
+div#quartz-root {
+  font-size: 14px;
+}
+
+// --- My Custom Cobalt Theme Fixes ---
+// 1. Set background for the EXPLORER sidebar container
+
+html {
+  background-color: #01213f;
+}
+
+body {
+  background-color: #0d2e4d;
+}
+
+body[data-slug] {
+  background-color: #0d2e4d;
+}
+
+body .page > #quartz-body .sidebar.left:has(.explorer) {
+  background-color: #0d2e4d;
+}
+
+// 2. Set background for the INNER content area to be transparent
+body .explorer .explorer-content {
+  background-color: #0d2e4d; // This tells it to use its parent's background
+}
+
+// 3. Set text/link color for the file names
+body .page > #quartz-body .sidebar.left:has(.explorer) a {
+  color: #e0e0e0;
+}
+
+// 4. Set folder title link color
+a.folder-title {
+  color: #adbd96 !important;
+}
+
+// 5. Remove bold from TOC links
+ul.toc-content a {
+  font-weight: normal;
+}
+
+body .page > #quartz-body .right.sidebar {
+  background-color: #0d2e4d;
+}
+
+// 1. Change color for all links
+a {
+  color: #7678e8 !important;
+}
+
+// 2. Change color for links when you hover over them (Good practice)
+a:hover {
+  color: #b4befe !important;
+  cursor: pointer !important;
+}
+
+// 3. Change color for bolded text
+strong,
+b {
+  color: #82f146 !important;
+}
+
+.page-listing {
+  display: hidden !important;
+}
