@@ -25,11 +25,11 @@ jobs:
         run: npx quartz build
 
       - name: Deploy to server
-        uses: easingthemes/ssh-deploy@v5
+        uses: burnett01/rsync-deployments@7.0.1
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: rustybyte
-          REMOTE_USER: corey
-          SOURCE: public/
-          TARGET: /var/www/bristol-ctf-club-resources/
-          ARGS: "-avz --delete"
+          switches: -avz --delete
+          path: public/
+          remote_path: /var/www/bristol-ctf-club-resources/
+          remote_host: 209.97.157.106
+          remote_user: corey
+          remote_key: ${{ secrets.SSH_SERVER_PRIVATE_KEY }}
