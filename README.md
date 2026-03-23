@@ -75,7 +75,7 @@ git commit -m "Add guide for SQL injection basics"
 ### Step 2: Push to Your Fork
 
 ```bash
-❯ git push --set-upstream origin myEdits
+❯ git push origin myEdits
 ```
 
 This uploads your changes to **your fork** on GitHub (not the original repository).
