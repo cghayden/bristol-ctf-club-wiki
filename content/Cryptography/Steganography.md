@@ -28,29 +28,26 @@ extract data inside image files:
 to extract data hidden inside an image file protected with a password
 `steghide extract -sf FILENAME`
 
-# general playbook:
+# general approach:
 #### 1. File
-Just to be sure what file you are facing with, check its type with type filename.
-
-- make sure the magic bytes match the file extension
+`file thisFile.txt`
+see what the computer thinks it is
 #### 2. Strings
+View all strings in the file with `strings filename.png`
 
-View all strings in the file with strings -n 7 -t x filename.png.
-
-use `-n 7` for strings of length 7+
-use `-t x`  to view- their position in the file.
+use `-n 7` for strings of length 7+ ( or other number)
+use `-t x`  to include line number / location in the file.
 
 #### 3. Exif / metadata
 `exiftool FILENAME
 
-#### 4. Check file signature.
+#### 4. Check file signature / magic bytes.
 `xxd FILENAME | head`
 make sure magic bytes match the file extension
 
 PNG: 89 50 4E 47 0D 0A 1A 0A
 
 JPEG: FF D8 FF
-(varies afer third byte... see wikipedia)
 
 [Wikipedia list of magic bytes](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
@@ -63,7 +60,7 @@ JPEG: FF D8 FF
 
 #### 5. pngcheck
 
-We can use `pngcheck`  to look for optional/correct broken chunks. This is vital if the image appears corrupt.
+you can use `pngcheck`  to look for optional/correct broken chunks. This is vital if the image appears corrupt.
 
 `pngcheck -vtp7f filename.png` to view all info.
 
@@ -73,7 +70,7 @@ Related write-ups:
 - [PlaidCTF 2015](https://github.com/ctfs/write-ups-2015/tree/master/plaidctf-2015/forensics/png-uncorrupt)
 - [SECCON Quals 2015](https://github.com/ctfs/write-ups-2015/tree/master/seccon-quals-ctf-2015/stegano/steganography-2)
 
-#### 6. Explore Colour & Bit Planes
+#### 6. Explore Color & Bit Planes
 
 Images can be hidden inside of the colour/bit planes. 
 [StegOnline](https://georgeom.net/StegOnline/upload). 
@@ -91,13 +88,11 @@ Related write-ups:
 - [Cybersocks Regional 2016](https://mokhdzanifaeq.github.io/2016/12/14/cybersocks-regional-2016-color-writeup/)
 
 #### 7. Extract LSB Data
-
 As mentioned in step 5, there could be some static in bit planes. If so, navigate to the "Extract Files/Data" page, and select the relevant bits.
 
 [Custom Example](https://georgeom.net/StegOnline/assets/examples/lsb-stego.jpg)
 
 #### 8. Check RGB Values
-
 ASCII Characters/other data can be hidden in the RGB(A) values of an image.
 [StegOnline](https://georgeom.net/StegOnline/upload) : preview the RGBA values. 
 Try converting them to text, and see if any flag is found. 
@@ -115,7 +110,7 @@ You can extract data by running:
 steghide extract -sf filename.png
 ```
 
-#### 10. Browse Colour Palette
+#### 10. Browse Color Palette
 
 If the PNG is in [type 3 for type specs](https://www.w3.org/TR/PNG-Chunks.html), you should look through the color palette.
 
