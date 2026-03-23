@@ -1,4 +1,4 @@
-https://hashcat.net/wiki/
+ohttps://hashcat.net/wiki/
 
 # start here
 

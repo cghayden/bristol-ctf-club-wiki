@@ -1,6 +1,6 @@
 General syntax:
 
-nmap SCAN_TYPE OPTIONS TARGET
+`nmap SCAN_TYPE OPTIONS TARGET`
 
 the default scan type  is -sS, SYN scan, *as long as you run with sudo*
 -sT ( connect scan) is default for non-sudo
@@ -8,23 +8,19 @@ the default scan type  is -sS, SYN scan, *as long as you run with sudo*
 
 some common useful options:
 
-| **Scanning Options** | **Description**                            |
-| -------------------- | ------------------------------------------ |
-| `-p 21`              | Scans only the specified port.             |
-| `--packet-trace`     | Shows all packets sent and received.       |
-| `-n`                 | Disables DNS resolution.                   |
-| `--disable-arp-ping` | Disables ARP ping.                         |
-| -Pn                  | disable ICMP echo requests (pings)         |
-| -sV                  | Version Scan                               |
-| -sU                  | UDP Scan                                   |
-| -sT                  | Connect Scan                               |
-| -A                   | aggresive scan -                           |
-| -O                   | OS discovery                               |
-| -f                   | fragment packets ( try to avoid detection) |
-| --source-port 53     | use port 53 to look simulate DNS request   |
-| -D RND:10            | use 10 random ip to avoid getting blocked  |
-
-
+| **Scanning Options** | **Description**                                                |
+| -------------------- | -------------------------------------------------------------- |
+| `-Pn`                | disable ICMP echo requests (pings); many firewalls block pings |
+| `-sV`                | Version Scan; find what is running on the ports                |
+| `-n`                 | Disables DNS resolution.                                       |
+| `--disable-arp-ping` | Disables ARP ping.                                             |
+| `-sU`                | UDP Scan                                                       |
+| `-sT`                | Connect Scan                                                   |
+| `-A`                 | aggresive scan -                                               |
+| `-O`                 | OS discovery                                                   |
+| `-f`                 | fragment packets ( try to avoid detection)                     |
+| `--source-port 53`   | use port 53 to look simulate DNS request                       |
+| `-D RND:10`          | use 10 random ip to avoid getting blocked                      |
 ## 6 possible port states
 
 | **State**          | **Description**                                                                                                                                                                                         |
