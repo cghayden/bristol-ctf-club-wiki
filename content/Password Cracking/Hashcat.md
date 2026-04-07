@@ -1,4 +1,4 @@
-ohttps://hashcat.net/wiki/
+https://hashcat.net/wiki/
 
 # start here
 
@@ -16,13 +16,14 @@ To Run:
 1 - put your hashes in a plaint text file, one hash per line
 2 - run hashcat, passing the options you want to use
 
+
 ## Basic syntax
 
 ```
 hashcat -a <attack-mode> -m <hash-type> <hashfile> <wordlist_or_mask_or_rule> -o <file>
 ```
 
-- `-a` = attack mode (e.g. `0` = wordlist, `3` = mask).
+- `-a` = attack mode (e.g. `0` = wordlist, `3` = mask/bruteforce etc).
 - `-m` = hash type (numeric ID from hashcat example_hashes).
 - `-o` = name of file to save cracked hashes in
 
@@ -31,6 +32,9 @@ Example: (wordlist attack on md5 hashes using rockyou wordlist, saving to myCrac
 hashcat -a 0 -m 0 myHashes.txt /usr/share/wordlists/rockyou.txt -o myCracks.txt
 ```
 
+the help file for hashcat `hashcat --help` has examples and lots of details
+![[Screenshot 2026-04-06 at 9.52.26 PM.png]]
+
 # Attack Modes
 - [Dictionary attack](https://hashcat.net/wiki/doku.php?id=dictionary_attack "dictionary_attack") - trying all words in a list; also called “straight” mode (attack mode 0, `-a 0`)
 - [Combinator attack](https://hashcat.net/wiki/doku.php?id=combinator_attack "combinator_attack") - concatenating words from multiple wordlists (`-a 1`)
@@ -38,7 +42,7 @@ hashcat -a 0 -m 0 myHashes.txt /usr/share/wordlists/rockyou.txt -o myCracks.txt
 - [Hybrid attack](https://hashcat.net/wiki/doku.php?id=hybrid_attack "hybrid_attack") - combining wordlists+masks (`-a 6`) and masks+wordlists (`-a 7`); can [also be done with rules](https://hashcat.net/wiki/doku.php?id=toggle_attack_with_rules "toggle_attack_with_rules")
 - [Association attack](https://hashcat.net/wiki/doku.php?id=association_attack "association_attack") - use an username, a filename, a hint, or any other pieces of information which could have had an influence in the password generation to attack one specific hash (`-a 9`)
 
-## Mask Attacks
+## Mask Attacks / Bruteforce
 **MASK attack** - passwords that are in a specific format
 `-a 3` =  mask attack (attack mode 3) 
 hashcat will test passwords created on the fly based on the character placeholders you specify:
