@@ -1,4 +1,20 @@
+802.11 is the wireless protocol 
+
 Cracking Wifi passwords will depend on whether you are working from a packet capture or just have a hash and/or SSID.
+
+Wireless encrytion is implemented at the Layer 2, Data Link, layer
+
+
+# WEP
+
+1. get IV with aircrack-ng:
+`aircrack-ng someFile.pcap’
+
+The IV is the WEP password…
+Enter IV / WEP password into wireshark to decrypt the packet traffic
+- in wireshark: settings(preferences) -> protocol > 802.11 > enable decryption > Edit > + > set key of WEP:[iv]
+
+now traffic will decrypt and you can see traffic, other protocols and IP addresses
 
 # WPA2
 
