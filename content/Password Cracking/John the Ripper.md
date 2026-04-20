@@ -5,4 +5,6 @@ John the ripper will attempt to identify the hash and run the appropriate attack
 
 rules based attack with custom wordlist
 `john ./hashfile --wordlist=mylist --rules /OneRuleToRuleThemAll.rule
+
+- the jumbo ruleset will try combinations of words in your wordlist
  
