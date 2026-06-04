@@ -1,25 +1,55 @@
-Our team is developing an internal forum application. We want to make sure the application is following secure coding practices after our security testers found some vulnerabilities, XSS and SQL Injection, so we can catch these vulnerabilities earlier in the software development lifecycle next time. To do this, you will be using Semgrep as a Static Application Security Testing, SAST, tool.  
+Our team is developing an internal forum application. We want to make sure the application is following secure coding practices after our security testers found some vulnerabilities, XSS and SQL Injection, so we can catch these vulnerabilities earlier in the software development lifecycle next time. To do this, you will be using Semgrep as a Static Application Security Testing, SAST, tool.
 
 [Download appscan_files.zip](https://drive.google.com/file/d/1736jrG6NC_G16CFNA89a2ay4Wr4kJM4T/view?usp=sharing)
+
 REQUIRED FILE: appscan_files.zip
 
-Q1 - 10 points  
+## Q1 - 10 points
+
 How many code findings did the `community/javascript` ruleset find?
 
-Q2 - 10 points  
+<div class="answer-checker">
+  <p><strong>Q1 Answer:</strong></p>
+  <input type="text" placeholder="Number" data-answer="15" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q2 - 10 points
+
 What is the rule name of the XSS findings?  
 Format: `semgrep-rules.community.javascript.category.category2.rulename`
 
-Q3 - 10 points  
+<div class="answer-checker">
+  <p><strong>Q2 Answer:</strong></p>
+  <input type="text" placeholder="Rule name" data-answer="community.javascript.vue.security.audit.xss.templates.avoid-v-html" oninput="let g=this.value.toLowerCase().trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer || g==='semgrep-rules.community.javascript.vue.security.audit.xss.templates.avoid-v-html'){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q3 - 10 points
+
 How many locations in code did Semgrep find possible XSS vulnerabilities?
 
 Note: There can be multiple in a single file.
 
-Q4 - 20 points  
+<div class="answer-checker">
+  <p><strong>Q3 Answer:</strong></p>
+  <input type="text" placeholder="Number" data-answer="4" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q4 - 20 points
+
 One of the XSS findings is a false positive; it has no user-controlled source. What file is that finding in?  
 Format: `filename.ext`
 
-Q5 - 50 points  
+<div class="answer-checker">
+  <p><strong>Q4 Answer:</strong></p>
+  <input type="text" placeholder="filename.ext" data-answer="basedate.vue" oninput="let g=this.value.toLowerCase().trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q5 - 50 points
+
 What is the flag?
 
 Note:
@@ -65,3 +95,9 @@ The filename you submit must be:
 ```text
 sqli-detection.yaml
 ```
+
+<div class="answer-checker">
+  <p><strong>Q5 Answer:</strong></p>
+  <input type="text" placeholder="SKY-XXXX-0000" data-answer="sky-szhw-4838" oninput="let g=this.value.toLowerCase().trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
