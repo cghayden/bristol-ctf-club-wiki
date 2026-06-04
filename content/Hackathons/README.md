@@ -1,0 +1,1 @@
+Some games have missing sections due to the use of in-web terminals for different challenges. If you think you're missing a question, don't fret, the section used an in-web terminal so the question isn't possible to solve. This involves mainly "Scanning and Reconnaissance" and "Enumeration and Exploitation"
