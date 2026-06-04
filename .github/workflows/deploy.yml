@@ -31,5 +31,5 @@ jobs:
           path: public/
           remote_path: /var/www/bristol-ctf-club-resources/
           remote_host: 209.97.157.106
-          remote_user: corey
+          remote_user: ${{ secrets.ADMIN_USER }}
           remote_key: ${{ secrets.SSH_SERVER_PRIVATE_KEY }}
