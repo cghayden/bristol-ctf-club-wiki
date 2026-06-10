@@ -1,5 +1,3 @@
-# Q2 Packet Payload (Easy)
-
 Our network team discovered a persistent connection from a development system to a suspected command and control server. They were able to capture a single packet in the middle of the connection whose payload is provided to you. They believe it may be an encoded login key. Can you turn the hex provided into the plaintext key?
 
 [Download packet_payload.txt](https://drive.google.com/file/d/17yth7GqcYzhtTWrviQFw6DpIRv3eW2fi/view?usp=sharing)

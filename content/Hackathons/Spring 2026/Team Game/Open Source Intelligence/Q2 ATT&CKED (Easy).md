@@ -88,13 +88,3 @@ Format: `T0001.001`
   <p></p>
 </div>
 
-## Q9 - 15 points
-
-What command, the full command string, does the software from Q5 run before it deletes itself from the device?  
-Example: `bash -c 'rm -rf /tmp/* && exit'`
-
-<div class="answer-checker">
-  <p><strong>Q9 Answer:</strong></p>
-  <input type="text" placeholder="Full command string" disabled>
-  <p>Answer not added yet.</p>
-</div>

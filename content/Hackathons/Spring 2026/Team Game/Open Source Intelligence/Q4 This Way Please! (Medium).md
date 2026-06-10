@@ -34,23 +34,7 @@ What year was the office completed?
 
 <div class="answer-checker">
   <p><strong>Q3 Answer:</strong></p>
-  <input type="text" placeholder="Year" data-answer="2024" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <input type="text" placeholder="Year" data-answer="2025" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
   <p></p>
 </div>
 
-## Q4 - 15 points
-
-What is the location and alphanumeric code associated with "River Bend"?
-
-Answer submission format examples:  
-`Town with the code WASD11`  
-`PO Box with the code 11004`  
-`Building with the code 23`  
-`Room with the code WASD11`  
-`Office with the code PD67`
-
-<div class="answer-checker">
-  <p><strong>Q4 Answer:</strong></p>
-  <input type="text" placeholder="Answer unknown right now" disabled>
-  <p>Answer not added yet.</p>
-</div>

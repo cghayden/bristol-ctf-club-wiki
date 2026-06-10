@@ -6,16 +6,6 @@ Their vehicle had a custom counter-surveillance setup in order to protect them a
 
 REQUIRED FILE: logs.kismet.7z
 
-## Q1 - 10 points
-
-How many kilometers did our agent travel during the recorded session?  
-Answer to the nearest 2nd decimal place.
-
-<div class="answer-checker">
-  <p><strong>Q1 Answer:</strong></p>
-  <input type="text" placeholder="Answer not added yet" disabled>
-  <p>Answer not added yet.</p>
-</div>
 
 ## Q2 - 10 points
 
@@ -27,15 +17,6 @@ What is the Raleigh Police case number for the incident that occurred closest to
   <p></p>
 </div>
 
-## Q3 - 10 points
-
-How many personal devices were detected probing for the NC Department of Labor network?
-
-<div class="answer-checker">
-  <p><strong>Q3 Answer:</strong></p>
-  <input type="text" placeholder="Answer not added yet" disabled>
-  <p>Answer not added yet.</p>
-</div>
 
 ## Q4 - 10 points
 
