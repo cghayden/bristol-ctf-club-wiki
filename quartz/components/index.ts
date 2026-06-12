@@ -53,3 +53,4 @@ export {
   ConditionalRender,
   GitHubLink,
 }
+export { default as AuthGate } from "./AuthGate"
