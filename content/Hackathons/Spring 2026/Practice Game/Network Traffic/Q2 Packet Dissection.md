@@ -1,20 +1,54 @@
 Dissect a DNS packet to understand how the protocol works. The hex dump contains raw DNS application data without any encapsulation.
 
-Q1 - 15 points  
-What is the Transaction ID of this DNS response?  
-In hex
+## Q1 - 15 points
 
-Q2 - 20 points  
+What is the Transaction ID of this DNS response, in hex?
+
+<div class="answer-checker">
+  <p><strong>Q1 Answer:</strong></p>
+  <input type="text" placeholder="Hex transaction ID" data-answer="f7b1" oninput="let g=this.value.toLowerCase().trim().replace(/^0x/,'');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q2 - 20 points
+
 How many answer resource records are in this DNS packet?
 
-Q3 - 25 points  
+<div class="answer-checker">
+  <p><strong>Q2 Answer:</strong></p>
+  <input type="text" placeholder="Number" data-answer="5" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q3 - 25 points
+
 What is the queried domain from this DNS request?
 
-Q4 - 25 points  
+<div class="answer-checker">
+  <p><strong>Q3 Answer:</strong></p>
+  <input type="text" placeholder="Domain" data-answer="stackoverflow.com" oninput="let g=this.value.toLowerCase().trim().replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/\.$/,'').replace(/\/$/,'');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q4 - 25 points
+
 What is the queried record type in the DNS query?
 
-Q5 - 25 points  
+<div class="answer-checker">
+  <p><strong>Q4 Answer:</strong></p>
+  <input type="text" placeholder="Record type" data-answer="mx" oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer || g==='mx (type 0x000f)' || g==='type 0x000f' || g==='0x000f' || g==='15'){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q5 - 25 points
+
 What is the value of the response record with the highest priority?
+
+<div class="answer-checker">
+  <p><strong>Q5 Answer:</strong></p>
+  <input type="text" placeholder="Response record" data-answer="aspmx.l.google.com" oninput="let g=this.value.toLowerCase().trim().replace(/\.$/,'');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
 
 ```text
 0000   f7 b1 81 80 00 01 00 05 00 00 00 01 0d 73 74 61

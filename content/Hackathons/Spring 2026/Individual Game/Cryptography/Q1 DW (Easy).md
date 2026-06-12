@@ -1,16 +1,51 @@
 We used to rely on these old TV heroes, but now we have you! Can you decipher these modified catchphrases encoded with number bases?
 
-Q1 - 10 points
-01001001 00100000 01100001 01101101 00100000 01000101 01000111 00101110 00100000 01001100 01100101 01110100 01110011 00100000 01100111 01100101 01110100 00100000 01110110 01101111 01101100 01100001 01110100 01101001 01101100 01100101 00100001  
+## Q1 - 10 points
 
-Q2 - 10 points
-104 141 162 151 156 147 040 144 165 143 153 040 157 146 040 157 142 163 143 165 162 151 164 171 054 040 101 144 166 157 143 141 164 145 040 157 146 040 160 154 151 147 150 164   
+01001001 00100000 01100001 01101101 00100000 01000101 01000111 00101110 00100000 01001100 01100101 01110100 01110011 00100000 01100111 01100101 01110100 00100000 01110110 01101111 01101100 01100001 01110100 01101001 01101100 01100101 00100001
 
-Q3 - 10 points
-54 68 65 79 20 61 72 65 20 74 68 65 20 73 75 72 70 72 69 73 65 20 74 68 61 74 20 6a 75 6d 70 73 20 69 6e 74 6f 20 79 6f 75 72 20 70 6c 61 6e 73 21                                                                                                                             
+<div class="answer-checker">
+  <p><strong>Q1 Answer:</strong></p>
+  <input type="text" placeholder="Decoded catchphrase" data-answer="i am eg. lets get volatile" oninput="let g=this.value.toLowerCase().trim().replace(/[’']/g,'').replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
 
-Q4 - 10 points
-VGhleSBjYWxsIG1lIFRoZSBMaXF1aWRhdG9yLiBUaGlzIGlzIG15IHBhcnRuZXIgWC5TLg==   
+## Q2 - 10 points
 
-Q5 - 10 points
-4d 54 49 30 49 44 45 31 4d 43 41 78 4e 44 55 67 4d 54 63 78 49 44 41 30 4d 43 41 78 4e 44 4d 67 4d 54 51 78 49 44 45 31 4e 43 41 78 4e 54 51 67 4d 44 51 77 49 44 45 31 4e 53 41 78 4e 44 55 67 4d 44 51 77 49 44 45 77 4e 43 41 78 4e 6a 49 67 4d 44 55 32 49 44 41 30 4d 43 41 78 4d 44 59 67 4d 54 55 33 49 44 45 32 4d 79 41 78 4e 6a 4d 67 4d 54 55 78 49 44 45 31 4e 43 41 77 4e 54 59 67 4d 44 51 77 49 44 45 79 4e 43 41 78 4e 54 41 67 4d 54 55 78 49 44 45 32 4d 79 41 77 4e 44 41 67 4d 54 55 78 49 44 45 32 4d 79 41 77 4e 44 41 67 4d 54 55 31 49 44 45 33 4d 53 41 77 4e 44 41 67 4d 54 59 77 49 44 45 30 4d 53 41 78 4e 6a 49 67 4d 54 59 30 49 44 45 31 4e 69 41 78 4e 44 55 67 4d 54 59 79 49 44 41 30 4d 43 41 78 4d 44 49 67 4d 44 55 32 49 44 45 77 4d 53 41 77 4e 54 59 3d |
+104 141 162 151 156 147 040 144 165 143 153 040 157 146 040 157 142 163 143 165 162 151 164 171 054 040 101 144 166 157 143 141 164 145 040 157 146 040 160 154 151 147 150 164
+
+<div class="answer-checker">
+  <p><strong>Q2 Answer:</strong></p>
+  <input type="text" placeholder="Decoded catchphrase" data-answer="daring duck of obscurity, advocate of plight" oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q3 - 10 points
+
+54 68 65 79 20 61 72 65 20 74 68 65 20 73 75 72 70 72 69 73 65 20 74 68 61 74 20 6a 75 6d 70 73 20 69 6e 74 6f 20 79 6f 75 72 20 70 6c 61 6e 73 21
+
+<div class="answer-checker">
+  <p><strong>Q3 Answer:</strong></p>
+  <input type="text" placeholder="Decoded catchphrase" data-answer="they are the surprise that jumps into your plans!" oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer || g==='they are the surprise that jumps into your plans'){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q4 - 10 points
+
+VGhleSBjYWxsIG1lIFRoZSBMaXF1aWRhdG9yLiBUaGlzIGlzIG15IHBhcnRuZXIgWC5TLg==
+
+<div class="answer-checker">
+  <p><strong>Q4 Answer:</strong></p>
+  <input type="text" placeholder="Decoded catchphrase" data-answer="they call me the liquidator. this is my partner x.s." oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer || g==='they call me the liquidator. this is my partner xs.' || g==='they call me the liquidator. this is my partner x.s'){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q5 - 10 points
+
+4d 54 49 30 49 44 45 31 4d 43 41 78 4e 44 55 67 4d 54 63 78 49 44 41 30 4d 43 41 78 4e 44 4d 67 4d 54 51 78 49 44 45 31 4e 43 41 78 4e 54 51 67 4d 44 51 77 49 44 45 31 4e 53 41 78 4e 44 55 67 4d 44 51 77 49 44 45 77 4e 43 41 78 4e 6a 49 67 4d 44 55 32 49 44 41 30 4d 43 41 78 4d 44 59 67 4d 54 55 33 49 44 45 32 4d 79 41 78 4e 6a 4d 67 4d 54 55 78 49 44 45 31 4e 43 41 77 4e 54 59 67 4d 44 51 77 49 44 45 79 4e 43 41 78 4e 54 41 67 4d 54 55 78 49 44 45 32 4d 79 41 77 4e 44 41 67 4d 54 55 78 49 44 45 32 4d 79 41 77 4e 44 41 67 4d 54 55 31 49 44 45 33 4d 53 41 77 4e 44 41 67 4d 54 59 77 49 44 45 30 4d 53 41 78 4e 6a 49 67 4d 54 59 30 49 44 45 31 4e 69 41 78 4e 44 55 67 4d 54 59 79 49 44 41 30 4d 43 41 78 4d 44 49 67 4d 44 55 32 49 44 45 77 4d 53 41 77 4e 54 59 3d
+
+<div class="answer-checker">
+  <p><strong>Q5 Answer:</strong></p>
+  <input type="text" placeholder="Decoded catchphrase" data-answer="they call me dr. fossil. this is my partner b.a." oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer || g==='they call me dr. fossil. this is my partner ba.' || g==='they call me dr. fossil. this is my partner b.a'){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>

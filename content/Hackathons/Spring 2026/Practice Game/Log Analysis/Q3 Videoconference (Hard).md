@@ -1,41 +1,114 @@
 Our remote workforce uses videoconference every day to get things done, but we've recently identified a few security issues. Help us investigate.  
 
 [Download meeting.json](https://drive.google.com/file/d/1NHubXf8yIyD4qp3d0Ml_WbflVH-CFVv1/view?usp=sharing)
-REQUIRED FILE: meeting.json
+REQUIRED FILE: latest.log
 
-Q1 - 5 points  
-How many total records are present in the meeting log?
+## Q1 - 5 points
 
-Q2 - 5 points  
-How many unique users are recorded in the meeting log?
+What application generated these logs?
 
-Q3 - 5 points  
-How many unique meetings are recorded in the logs?
+<div class="answer-checker">
+  <p><strong>Q1 Answer:</strong></p>
+  <input type="text" placeholder="Application" data-answer="minecraft server" oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer || g==='minecraft'){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
 
-Q4 - 5 points  
-How many meetings had dial-in users?
+## Q2 - 5 points
 
-Q5 - 10 points  
-What is the average number of bytes processed?  
-Round to nearest whole number
+What game version was the server running?
 
-Q6 - 10 points  
-How many unique IPs are recorded in the logs?
+<div class="answer-checker">
+  <p><strong>Q2 Answer:</strong></p>
+  <input type="text" placeholder="Version" data-answer="1.16.3" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
 
-Q7 - 10 points  
-What is the meeting ID with the most number of participants?
+## Q3 - 10 points
 
-Q8 - 10 points  
-Which date had the most number of calls take place?
+How many unique players joined the server?
 
-Q9 - 15 points  
-Which date had the highest average bytes processed for its calls?
+<div class="answer-checker">
+  <p><strong>Q3 Answer:</strong></p>
+  <input type="text" placeholder="Number" data-answer="4" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
 
-Q10 - 20 points  
-There was an unauthorized user on a call. What is the meeting ID of that call?
+## Q4 - 15 points
 
-Q11 - 20 points  
-We believe there was an account that was hacked. What is the name of the person that was hacked?
+How many times did `boneappletea` die?
 
-Q12 - 15 points  
-What is the name of the attacker responsible for the breach referenced above?
+<div class="answer-checker">
+  <p><strong>Q4 Answer:</strong></p>
+  <input type="text" placeholder="Number" data-answer="12" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q5 - 5 points
+
+Who was the player that killed `boneappletea`?
+
+<div class="answer-checker">
+  <p><strong>Q5 Answer:</strong></p>
+  <input type="text" placeholder="Player name" data-answer="gardensnek" oninput="let g=this.value.toLowerCase().trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q6 - 15 points
+
+How many chat messages are sent while the server is up?
+
+<div class="answer-checker">
+  <p><strong>Q6 Answer:</strong></p>
+  <input type="text" placeholder="Number" data-answer="55" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q7 - 20 points
+
+Which player got the most advancements?
+
+<div class="answer-checker">
+  <p><strong>Q7 Answer:</strong></p>
+  <input type="text" placeholder="Player name" data-answer="gardensnek" oninput="let g=this.value.toLowerCase().trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q8 - 10 points
+
+How many advancements did said player get?
+
+<div class="answer-checker">
+  <p><strong>Q8 Answer:</strong></p>
+  <input type="text" placeholder="Number" data-answer="12" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q9 - 10 points
+
+Who was kicked from the server first?
+
+<div class="answer-checker">
+  <p><strong>Q9 Answer:</strong></p>
+  <input type="text" placeholder="Player name" data-answer="boneappletea" oninput="let g=this.value.toLowerCase().trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q10 - 5 points
+
+Why was said player kicked from the game?
+
+<div class="answer-checker">
+  <p><strong>Q10 Answer:</strong></p>
+  <input type="text" placeholder="Reason" data-answer="floating too long" oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q11 - 10 points
+
+What was the error that caused the server to crash?
+
+<div class="answer-checker">
+  <p><strong>Q11 Answer:</strong></p>
+  <input type="text" placeholder="Error message" data-answer="java.io.ioexception: input/output error" oninput="let g=this.value.toLowerCase().trim().replace(/\s+/g,' ');let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>

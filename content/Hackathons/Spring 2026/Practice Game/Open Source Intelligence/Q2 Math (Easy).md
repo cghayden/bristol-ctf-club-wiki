@@ -1,19 +1,54 @@
 Help double check the work of some new recruits by doing some binary math. Provide your answer in base 10.
 
-Q1 - 10 points  
-0x25 | 0x48
+## Q1 - 10 points
 
-Q2 - 10 points  
-0x79 & 0xF5
+`0x25 | 0x48`
 
-Q3 - 10 points  
-0xC9 ^ 0x14
+<div class="answer-checker">
+  <p><strong>Q1 Answer:</strong></p>
+  <input type="text" placeholder="Base 10 answer" data-answer="109" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
 
-Q4 - 10 points  
-0xED >> 1
+## Q2 - 10 points
 
-Q5 - 10 points  
-0xB << 2
+`0x79 & 0xF5`
+
+<div class="answer-checker">
+  <p><strong>Q2 Answer:</strong></p>
+  <input type="text" placeholder="Base 10 answer" data-answer="113" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q3 - 10 points
+
+`0xC9 ^ 0x14`
+
+<div class="answer-checker">
+  <p><strong>Q3 Answer:</strong></p>
+  <input type="text" placeholder="Base 10 answer" data-answer="221" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q4 - 10 points
+
+`0xED >> 1`
+
+<div class="answer-checker">
+  <p><strong>Q4 Answer:</strong></p>
+  <input type="text" placeholder="Base 10 answer" data-answer="118" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
+
+## Q5 - 10 points
+
+`0xB << 2`
+
+<div class="answer-checker">
+  <p><strong>Q5 Answer:</strong></p>
+  <input type="text" placeholder="Base 10 answer" data-answer="44" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
+</div>
 
 ```text
 bit-hacks

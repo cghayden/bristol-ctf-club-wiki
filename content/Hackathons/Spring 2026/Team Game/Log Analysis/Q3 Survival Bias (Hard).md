@@ -62,12 +62,3 @@ Format: `(0,0)`
   <p></p>
 </div>
 
-## Q6 - 25 points
-
-Give the coordinates of one of the six potential malicious access point locations based on the logs given.
-
-<div class="answer-checker">
-  <p><strong>Q6 Answer:</strong></p>
-  <input type="text" placeholder="Answer not added yet" disabled>
-  <p>Answer not added yet.</p>
-</div>
