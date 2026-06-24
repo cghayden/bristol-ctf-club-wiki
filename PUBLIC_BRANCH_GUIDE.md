@@ -77,10 +77,11 @@ git push origin public
 
 ## Deployments
 
+
 Point each deployment target at the appropriate branch:
 
-- **Private site** (bristolctf.club) → build from `main`
-- **Public site** (public.bristolctf.club) → build from `public`
+
+- **Private site** (e.g. bristolctf.club with auth) → build from `main`
 - **Public site** → build from `public`
 
 In a GitHub Actions workflow this is typically controlled by the `branches` trigger:
