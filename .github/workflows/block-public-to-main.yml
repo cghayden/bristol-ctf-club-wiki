@@ -2,18 +2,17 @@ name: Block public → main merges
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
-  check-source-branch:
+  block:
     runs-on: ubuntu-latest
     steps:
-      - name: Reject PRs from the public branch
-        if: github.head_ref == 'public'
+      - name: Fail if source branch is public
         run: |
-          echo "::error::PRs from the 'public' branch into 'main' are not allowed."
-          echo "::error::The public branch is a one-way deployment target. Sync changes from main → public, never the reverse."
-          exit 1
-      - name: OK
-        run: echo "Source branch is not 'public'. Check passed."
+          echo "Head ref: ${{ github.head_ref }}"
+          if [ "${{ github.head_ref }}" = "public" ]; then
+            echo "PRs from 'public' to 'main' are not allowed."
+            exit 1
+          fi
