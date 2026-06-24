@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "bristolctf.club",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "Hackathons"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
