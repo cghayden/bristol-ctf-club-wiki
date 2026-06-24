@@ -6,7 +6,7 @@ Please review and test your changes tot he best of your ability before requestin
 
 ## Description
 
-Describe your changes in detail...
+Describe your change in detail...
 
 
 ## Checks
