@@ -7,8 +7,9 @@ This repo uses two long-lived branches with different purposes:
 | `main` | Private / club-facing site | Yes | Yes |
 | `public` | Public-facing site | No | No |
 
-The `public` branch is identical to `main` except for two config differences committed directly on `public`:
+The `public` branch is identical to `main` except for three config differences committed directly on `public`:
 - `quartz.config.ts` — `"Hackathons"` added to `ignorePatterns`
+- `quartz.config.ts` — `baseUrl` set to `"public.bristolctf.club"`
 - `quartz.layout.ts` — `Component.AuthGate()` removed from `afterBody`
 
 **Never merge `public` back into `main`.** Changes only flow one direction: `main` → `public`.
@@ -62,6 +63,7 @@ Because the two config changes on `public` touch different lines than anything c
 A conflict will only happen if someone edited `quartz.config.ts` or `quartz.layout.ts` on `main`. Resolve it by ensuring the `public`-branch values are preserved:
 
 - `quartz.config.ts` — `ignorePatterns` must include `"Hackathons"`
+- `quartz.config.ts` — `baseUrl` must be `"public.bristolctf.club"`
 - `quartz.layout.ts` — `afterBody` must be `[]` (no `AuthGate`)
 
 ```bash
@@ -77,7 +79,8 @@ git push origin public
 
 Point each deployment target at the appropriate branch:
 
-- **Private site** (e.g. bristolctf.club with auth) → build from `main`
+- **Private site** (bristolctf.club) → build from `main`
+- **Public site** (public.bristolctf.club) → build from `public`
 - **Public site** → build from `public`
 
 In a GitHub Actions workflow this is typically controlled by the `branches` trigger:

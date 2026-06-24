@@ -11,3 +11,4 @@ replit.nix
 .deploy
 deploy.sh
 notesToSelf.txt
+server/

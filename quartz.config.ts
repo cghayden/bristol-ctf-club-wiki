@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "resources.bristolctf.club",
+    baseUrl: "public.bristolctf.club",
     ignorePatterns: ["private", "templates", ".obsidian", "Hackathons"],
     defaultDateType: "modified",
     theme: {
