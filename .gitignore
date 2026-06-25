@@ -10,5 +10,5 @@ private/
 replit.nix
 .deploy
 deploy.sh
-notesToSelf.txt
-server/
+notesToSelf.txtcookies.txt
+cookies.txt
