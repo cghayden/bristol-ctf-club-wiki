@@ -18,11 +18,12 @@ const AuthGate: QuartzComponent = () => {
               align-items: center;
               justify-content: center;
               background:
-                radial-gradient(circle at 20% 80%, rgba(109, 218, 255, 0.85), transparent 30%),
-                radial-gradient(circle at 62% 55%, rgba(255, 180, 35, 0.45), transparent 18%),
+                // radial-gradient(circle at 20% 80%, rgba(109, 218, 255, 0.85), transparent 30%),
+                // radial-gradient(circle at 62% 55%, rgba(255, 180, 35, 0.45), transparent 18%),
+                // removed radial gradients for improved text visibility
                 linear-gradient(135deg, #005cab 0%, #0aa4e8 38%, #0050a7 100%);
-              font-family: "Segoe UI", Arial, sans-serif;
-            }
+                font-family: "Segoe UI", Arial, sans-serif;
+              }
 
             #bristol-auth-box {
               width: min(420px, calc(100vw - 32px));

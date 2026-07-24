@@ -27,9 +27,10 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.Search(),
-    Component.Explorer(),
-    Component.GitHubLink({
-      url: "https://github.com/cghayden/bristol-ctf-club-wiki",
+    Component.Explorer({
+      footer: Component.GitHubLink({
+        url: "https://github.com/cghayden/bristol-ctf-club-wiki",
+      }),
     }),
   ],
   right: [],
@@ -44,9 +45,10 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.Search(),
-    Component.Explorer(),
-    Component.GitHubLink({
-      url: "https://github.com/cghayden/bristol-ctf-club-wiki",
+    Component.Explorer({
+      footer: Component.GitHubLink({
+        url: "https://github.com/cghayden/bristol-ctf-club-wiki",
+      }),
     }),
   ],
   right: [],

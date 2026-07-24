@@ -12,6 +12,7 @@
     --border-light: rgba(255, 255, 255, 0.95);
     --border-blue: #8baed0;
     --text: #111;
+    --text-light: #daeeff;
     --font-ui: "Segoe UI", Arial, sans-serif;
   }
   
@@ -31,8 +32,9 @@
     color: var(--text);
     font-family: var(--font-ui);
     background:
-      radial-gradient(circle at 20% 80%, rgba(109, 218, 255, 0.85), transparent 30%),
-      radial-gradient(circle at 62% 55%, rgba(255, 180, 35, 0.45), transparent 18%),
+      // radial-gradient(circle at 20% 80%, rgba(109, 218, 255, 0.85), transparent 30%),
+      // radial-gradient(circle at 62% 55%, rgba(255, 180, 35, 0.45), transparent 18%),
+      // removed radial gradients for improved text visibility
       linear-gradient(135deg, #005cab 0%, #0aa4e8 38%, #0050a7 100%);
     background-attachment: fixed;
   }
@@ -194,7 +196,7 @@
   }
   
   .explorer :is(.explorer-header, .title-button),
-  .explorer > button {
+  .explorer > button:not(.mobile-explorer) {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
@@ -451,6 +453,7 @@
   :is(footer, .footer, .page-footer) {
     position: static;
     z-index: 5;
+    display: flex;
     margin: 1.5rem 48px 2rem 390px;
     color: #fff;
     font-size: 0.95rem;
@@ -466,7 +469,7 @@
   
   :is(footer, .footer, .page-footer) a {
     display: inline;
-    color: #e8f4ff;
+    color: var(--panel);
   }
   
   :is(footer, .footer, .page-footer) ul {
@@ -481,6 +484,26 @@
     margin: 0 0.5rem;
   }
   
+  /* Hide all date/time elements and reading-time spans rendered by Quartz (e.g. in ContentMeta and folder listings).
+     To re-enable, remove the rules below. */
+  time,
+  .content-meta span {
+    display: none !important;
+  }
+
+  /* ==========================================================
+     Branded link colours
+     ========================================================== */
+
+  .center .breadcrumb-container a {
+    color: var(--text-light) !important;
+  }
+
+  .center ul.section-ul a,
+  .github-link > a {
+    color: var(--text-light) !important;
+  }
+
   /* ==========================================================
      Mobile layout
      ========================================================== */
@@ -529,6 +552,10 @@
       position: relative !important;
       width: 100% !important;
       margin: 0 !important;
+    }
+
+    .sidebar.left h2.page-title a {
+      color: var(--panel) !important;
     }
   
     button.mobile-explorer,
@@ -669,6 +696,7 @@
     }
   
     :is(footer, .footer, .page-footer) {
+      order: 4 !important;
       width: 100% !important;
       margin: 1rem 0 0 !important;
       padding: 0.75rem !important;
