@@ -54,6 +54,13 @@
     align-self: flex-start;
     margin-top: auto;
     margin-bottom: auto;
+
+    &.collapsed {
+      min-height: 0;
+      & .explorer-content {
+        display: none;
+      }
+    }
   }
 
   button.mobile-explorer {
