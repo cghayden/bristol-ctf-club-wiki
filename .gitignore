@@ -13,3 +13,4 @@ deploy.sh
 notesToSelf.txt
 cookies.txt
 server/
+.env
