@@ -1,4 +1,4 @@
-General syntax:
+## General syntax:
 
 `nmap SCAN_TYPE OPTIONS TARGET`
 
@@ -32,7 +32,7 @@ some common useful options:
 | `open\|filtered`   | If we do not get a response for a specific port, `Nmap` will set it to that state. This indicates that a firewall or packet filter may protect the port.                                                |
 | `closed\|filtered` | This state only occurs in the **IP ID idle** scans and indicates that it was impossible to determine if the scanned port is closed or filtered by a firewall.                                           |
 
-# NMAP Scripting Engine ( NSE )
+## NMAP Scripting Engine ( NSE )
 It provides us with the possibility to create or use preinstalled scripts in Lua for interaction with certain services. There are a total of 14 categories into which these scripts can be divided:
 
 https://nmap.org/nsedoc/
