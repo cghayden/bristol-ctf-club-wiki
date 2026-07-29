@@ -16,6 +16,5 @@ when presented with just a file, try binwalk first to see if it finds anything..
 - Autopsy browser UI on linux
 - FTK Imager in Windows
 - Autopsy in Windows
-
 - look for deleted files, users, etc.
 
