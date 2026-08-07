@@ -71,8 +71,8 @@ What is flag 1?
 
 <div class="answer-checker">
   <p><strong>Q7 Answer:</strong></p>
-  <input type="text" placeholder="Answer not added yet" disabled>
-  <p>Answer not added yet.</p>
+  <input type="text" placeholder="Flag 1" data-answer="SKY-ZPOL-9257" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
 </div>
 
 ## Q8 - 25 points
@@ -81,6 +81,6 @@ What is flag 2?
 
 <div class="answer-checker">
   <p><strong>Q8 Answer:</strong></p>
-  <input type="text" placeholder="Answer not added yet" disabled>
-  <p>Answer not added yet.</p>
+  <input type="text" placeholder="Flag 2" data-answer="SKY-INVS-8302" oninput="let g=this.value.trim();let r=this.nextElementSibling;if(!g){r.textContent='';}else if(g===this.dataset.answer){r.textContent='Correct!';r.style.color='limegreen';}else{r.textContent='Incorrect';r.style.color='tomato';}">
+  <p></p>
 </div>
