@@ -19,8 +19,8 @@ To Run:
 
 ## Basic syntax
 
-```
-hashcat -a <attack-mode> -m <hash-type> <hashfile> <wordlist_or_mask_or_rule> -o <file>
+```shell cmd:$
+$ hashcat -a <attack-mode> -m <hash-type> <hashfile> <wordlist_or_mask_or_rule> -o <file>
 ```
 
 - `-a` = attack mode (e.g. `0` = wordlist, `3` = mask/bruteforce etc).
