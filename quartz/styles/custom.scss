@@ -1,3 +1,11 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+html body body[data-slug] div#quartz-root.page,
+html .page > div#quartz-body div.sidebar.left,
+html .page > div#quartz-body div.sidebar.left:has(.explorer),
+html .page > div#quartz-body div.sidebar.left .explorer .explorer-content,
+html .page > div#quartz-body div.sidebar.right {
+	background-color: var(--background-secondary);
+}
