@@ -1,3 +1,5 @@
+ [cyberchef](https://www.cyberchef.dev/cyberchef](https://www.cyberchef.dev/cyberchef))
+
 CyberChef is going to be your best friend ...
 
 **CyberChef** is a browser-based data analysis and transformational tool, the **"Cyber Swiss Army Knife."**
@@ -26,7 +28,7 @@ CyberChef is particularly useful for:
     - MD5, SHA-256, HMAC, etc
         
 - **Compressed data**, 
-	- can identitfy data as being gzip, zip, 7zip, etc.
+	- can identify data as being gzip, zip, 7zip, etc.
 
 - **Data Conversion**
     - Hex ↔ text
