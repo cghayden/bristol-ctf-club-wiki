@@ -1,0 +1,30 @@
+server {
+    error_log /var/log/nginx/public-bristolctf-CLUB-error.log debug;
+    server_name public.bristolctf.club;
+
+    root /var/www/bristol-ctf-club-resources-public;
+    index index.html;
+
+    location / {
+        try_files $uri $uri.html $uri/ =404;
+    }
+
+    location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    listen [::]:443 ssl;
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/public.bristolctf.club/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/public.bristolctf.club/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name public.bristolctf.club;
+    return 301 https://$host$request_uri;
+}
