@@ -1,0 +1,19 @@
+server {
+    error_log /var/log/nginx/bristolctf-CLUB-error.log debug;
+    server_name bristolctf.club www.bristolctf.club;
+    return 301 https://public.bristolctf.club$request_uri;
+
+    listen [::]:443 ssl;
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/bristolctf.club/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/bristolctf.club/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name bristolctf.club www.bristolctf.club;
+    return 301 https://public.bristolctf.club$request_uri;
+}

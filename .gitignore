@@ -1,6 +1,7 @@
 .DS_Store
+.gitignore
 node_modules
-public/
+public
 prof
 tsconfig.tsbuildinfo
 .obsidian
@@ -8,9 +9,6 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-.deploy
-deploy.sh
-notesToSelf.txt
-cookies.txt
-server/
-.env
+.quartz/
+quartz/cli/tui/dist/
+.turbo/

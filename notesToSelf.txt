@@ -1,0 +1,26 @@
+Notes to self about building and deploying on the server
+
+The public site will be hosted on the subdomain public.bristolctf.club:
+For public site,  baseUrl: "public.bristolctf.club", in quartz.config.ts
+" to PUBLIC_BRANCH_GUIDE.md".
+
+For the droplet, the steps to deploy public version of site will be:
+
+Add DNS A record: public.bristolctf.club → your droplet IP
+Copy the nginx config to /etc/nginx/sites-enabled/ on the droplet
+Build the public branch and output to /var/www/bristol-ctf-club-resources-public/
+Run Certbot to get the TLS cert:
+nginx -s reload
+
+
+How this works on the server:
+
+nginx's core job — virtual hosting. Here's how it works:
+
+When a request hits your droplet, nginx reads the Host header from the HTTP request (e.g. Host: bristolctf.club) and matches it against the server_name directives across all your config files in sites-enabled/. Whichever block matches gets to handle the request and serve from its root directory.
+
+getting a TLS certificate for a site: 
+
+On the server: 
+ sudo certbot --nginx -d public.bristolctf.club
+ it will edit the etc/nginx/sites-available/public.bristolctf.club to add the 443 block
