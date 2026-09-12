@@ -6,16 +6,8 @@ refer to the page on awk usage, and the NCL walkthrough, linked below:
 [NCL nginx walkthrough](https://trove.cyberskyline.com/7884f0c64e8b46cea64332a77b5ef56e)
 [NCL vsftpd walkthrough](https://trove.cyberskyline.com/a9aad5ab10334ac4ab37bdd04058e1ba)
 
-
-
-# using Spreadsheets
-using a spreadsheet is also very helpful... 
-copy and paste into a google sheet or excel, or convert to a csv first if you can.
-or just upload the file and open in a spreadsheet.
-
-[NCL Log Analysis with spreadsheets walkthrough](https://www.youtube.com/watch?v=w2uJVWPTvCo&t=1139s)
-
-# useful commands
+# [[awk]]
+# useful linux commands
 
 |         |                   |                                                                                                                |              |
 | ------- | ----------------- | -------------------------------------------------------------------------------------------------------------- | ------------ |
@@ -27,3 +19,11 @@ or just upload the file and open in a spreadsheet.
 | wc      | Word count        | cat file.txt \| wc -l(Counts lines in file.txt)                                                                | -l, -c, -w   |
 | sort    | Sorts output      | cat file.txt \| awk ‘{print $7}’ \| sort -d(takes the output from awk and sorts it in dictionary order)        | -d, -n       |
 | uniq    | Remove duplicates | cat file.txt \| sort \| uniq                                                                                   | -c           |
+
+# using Spreadsheets
+using a spreadsheet is also very helpful... 
+copy and paste into a google sheet or excel, or convert to a csv first if you can.
+or just upload the file and open in a spreadsheet.
+
+[NCL Log Analysis with spreadsheets walkthrough](https://www.youtube.com/watch?v=w2uJVWPTvCo&t=1139s)
+
