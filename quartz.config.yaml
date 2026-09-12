@@ -268,10 +268,7 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
-  - source:
-      name: quartz-themes
-      repo: "https://github.com/saberzero1/quartz-themes.git"
-      subdir: plugin
+  - source: "@quartz-themes/core"
     enabled: true
     options:
       theme: "cobalt-peacock"
