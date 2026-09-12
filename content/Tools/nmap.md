@@ -73,13 +73,19 @@ to list by type:
 |`version`|Extension for service detection.|
 |`vuln`|Identification of specific vulnerabilities.|
 
-examples:
+
+# script use examples:
+
+run default scripts:
+can be a useful to include in first run of enumerating the target
+`sudo nmap <target> -sC`
 
 use Samba server to query hostname:
 `nmap -p 139,445 --script smb-os-discovery 10.129.2.49`
 
-`--script=http-*,ssl-*` 
 - run all http and ssl scripts
-`--script="default and not (brute or intrusive`
-- run defaults in each category, not brute or intrusive ones
+`--script=http-*,ssl-*`
+
+- Run default scripts, excluding brute-force and intrusive scripts
+`--script="default and not (brute or intrusive)"`
 

@@ -1,13 +1,31 @@
-hello OSINT world
+# web searches
+reddit
 
-Resources:
+youtube
 
+
+# Resources:
+
+## maps
 google Earth ... 
 - in the past we have had to set points and radii from those points to see where the circumferences intersect
 
-Inspecting image files:
-
+## image inspection
 reverse image lookup - google, tineye
 
-[https://metadata2go.com](https://www.metadata2go.com/)
+Inspecting image files:
+- [https://metadata2go.com](https://www.metadata2go.com/)
+- exiftool
 
+search
+
+reddit
+
+youtube
+
+openmaps
+
+
+# Google dork cheat sheet
+
+![[GoogleDorkCheatSheet.pdf]]
