@@ -7,9 +7,11 @@ This repo uses two long-lived branches with different purposes:
 | `main` | Private / club-facing site | Yes | Yes |
 | `public` | Public-facing site | No | No |
 
-The `public` branch is identical to `main` except for two config differences committed directly on `public`:
-- `quartz.config.ts` — `"Hackathons"` added to `ignorePatterns`
-- `quartz.layout.ts` — `Component.AuthGate()` removed from `afterBody`
+Quartz 5 no longer uses `quartz.config.ts` or `quartz.layout.ts`. Branch-specific build differences now live in the active Quartz 5 configuration files:
+- `quartz.config.yaml` for plugin selection, ordering, and layout placement
+- `quartz.ts` for TypeScript-only overrides that YAML cannot express
+
+If the `public` branch needs to hide content or disable private-only UI, make those changes in those two files instead of reintroducing the old Quartz 4 config files.
 
 **Never merge `public` back into `main`.** Changes only flow one direction: `main` → `public`.
 
@@ -55,18 +57,18 @@ git merge main
 git push origin public
 ```
 
-Because the two config changes on `public` touch different lines than anything contributors normally edit, merges are almost always conflict-free.
+Because the `public` branch should only carry a small number of Quartz 5 config differences, merges are usually conflict-free.
 
 ### If a merge conflict occurs
 
-A conflict will only happen if someone edited `quartz.config.ts` or `quartz.layout.ts` on `main`. Resolve it by ensuring the `public`-branch values are preserved:
+A conflict will usually mean someone edited the active Quartz 5 configuration on `main`. Resolve it by preserving whatever `public`-only values are currently intended in:
 
-- `quartz.config.ts` — `ignorePatterns` must include `"Hackathons"`
-- `quartz.layout.ts` — `afterBody` must be `[]` (no `AuthGate`)
+- `quartz.config.yaml`
+- `quartz.ts`
 
 ```bash
 # After resolving conflicts in your editor:
-git add quartz.config.ts quartz.layout.ts
+git add quartz.config.yaml quartz.ts
 git merge --continue
 git push origin public
 ```
@@ -94,5 +96,5 @@ on:
 ## What NOT to do
 
 - Do not commit content or style changes directly to `public` — they will be overwritten on the next merge from `main`
-- Do not revert or change the two config commits on `public` — they are the only thing separating the public and private builds
+- Do not store branch-specific Quartz behavior in deleted legacy files like `quartz.config.ts` or `quartz.layout.ts`
 - Do not merge `public` into `main`
