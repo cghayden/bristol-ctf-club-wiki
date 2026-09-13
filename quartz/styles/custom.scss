@@ -2,10 +2,141 @@
 
 // put your custom CSS here!
 
-html body body[data-slug] div#quartz-root.page,
+:root[saved-theme="dark"] {
+	--astral-sidebar-surface: var(--code-background, var(--shiki-dark-bg, #1f0d29));
+	--background-primary: #261230;
+	--background-primary-alt: #261230;
+	--background-secondary: #1f0d29;
+	--background-secondary-alt: #1f0d29;
+	--background-modifier-border: #6f5d6f;
+	--background-modifier-border-hover: #78876e;
+	--background-modifier-border-focus: #d7ff64;
+	--text-normal: #f0dfdf;
+	--text-muted: #f1aff6;
+	--text-faint: #cdcbfb;
+	--text-accent: #ffac2f;
+	--text-accent-hover: #de5fe9;
+	--text-on-accent: #14061b;
+	--text-highlight-bg: #40613a;
+	--interactive-normal: #1f0d29;
+	--interactive-hover: #261230;
+	--interactive-accent: #ffac2f;
+	--interactive-accent-hover: #de5fe9;
+	--nav-item-color: #f6afbc;
+	--nav-item-color-hover: #fbf2fc;
+	--nav-item-color-active: #d7ff64;
+	--nav-item-background-hover: rgba(215, 255, 100, 0.08);
+	--nav-item-background-active: rgba(215, 255, 100, 0.16);
+	--icon-color: rgb(149, 146, 146);
+	--icon-color-hover: #fbf2fc;
+	--icon-color-active: #ffac2f;
+	--link-color: #ffac2f;
+	--link-color-hover: #de5fe9;
+	--color-base-00: #261230;
+	--color-base-05: #261230;
+	--color-base-10: hsl(279, 45%, 16%);
+	--color-base-20: hsl(279, 45%, 16%);
+	--color-base-25: #1f0d29;
+	--color-base-30: #1f0d29;
+	--color-base-35: #6f5d6f;
+	--color-base-40: #6f5d6f;
+	--color-base-50: #78876e;
+	--color-base-60: #cdcbfb;
+	--color-base-70: #f1aff6;
+	--color-base-100: #fbf2fc;
+}
+
+html .page > div#quartz-body {
+	background-color: var(--background-primary);
+}
+
 html .page > div#quartz-body div.sidebar.left,
-html .page > div#quartz-body div.sidebar.left:has(.explorer),
 html .page > div#quartz-body div.sidebar.left .explorer .explorer-content,
 html .page > div#quartz-body div.sidebar.right {
-	background-color: var(--background-secondary);
+	background-color: var(--astral-sidebar-surface, var(--background-secondary)) !important;
+	border-color: var(--background-modifier-border) !important;
+}
+
+:root[saved-theme="dark"] .page > div#quartz-body .explorer .explorer-content,
+:root[saved-theme="dark"] .page > div#quartz-body .explorer .explorer-content ul,
+:root[saved-theme="dark"] .page > div#quartz-body .search > .search-container > .search-space > input,
+:root[saved-theme="dark"] .page > div#quartz-body .search > .search-container > .search-space > .search-layout {
+	background-color: var(--astral-sidebar-surface, var(--background-secondary)) !important;
+	border-color: var(--background-modifier-border) !important;
+	color: var(--text-normal) !important;
+}
+
+:root[saved-theme="dark"] .page > div#quartz-body .search > .search-button,
+:root[saved-theme="dark"] .page > div#quartz-body .folder-outer > ul {
+	border-color: var(--background-modifier-border) !important;
+}
+
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.left a,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.left button,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.left h2,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.right a,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.right button,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.right h2,
+:root[saved-theme="dark"] .page-title a {
+	color: var(--nav-item-color) !important;
+}
+
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.left a:hover,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.left button:hover,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.right a:hover,
+:root[saved-theme="dark"] .page > div#quartz-body .sidebar.right button:hover,
+:root[saved-theme="dark"] .page-title a:hover {
+	color: var(--nav-item-color-hover) !important;
+}
+
+html .page > div#quartz-body div.center {
+	box-sizing: border-box;
+	max-width: calc(100% - 3rem) !important;
+	min-width: 0 !important;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+@media all and ($mobile) {
+	html .page > div#quartz-body div.center {
+		max-width: 100% !important;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+}
+
+:root {
+	--shell-transcript-bg: var(--shiki-light-bg, var(--background-secondary));
+	--shell-transcript-output: var(--text-muted);
+	--shell-transcript-command: var(--text-normal);
+}
+
+:root[saved-theme="dark"] {
+	--shell-transcript-bg: var(--astral-sidebar-surface, var(--shiki-dark-bg, var(--background-secondary)));
+	--shell-transcript-output: var(--text-muted);
+	--shell-transcript-command: var(--text-normal);
+}
+
+figure[data-rehype-pretty-code-figure]:has(code[data-language="shell-session"]) > pre,
+figure[data-rehype-pretty-code-figure]:has(code[data-language="shell"]) > pre,
+figure[data-rehype-pretty-code-figure]:has(code[data-language="bash"]) > pre,
+figure[data-rehype-pretty-code-figure]:has(code[data-language="console"]) > pre,
+pre:has(> code[data-language="shell-session"]),
+pre:has(> code[data-language="shell"]),
+pre:has(> code[data-language="bash"]),
+pre:has(> code[data-language="console"]) {
+	background-color: var(--shell-transcript-bg);
+}
+
+.token.output,
+.token.info.punctuation,
+.token.shell-symbol {
+	color: var(--shell-transcript-output);
+	opacity: 1;
+}
+
+.token.command {
+	color: var(--shell-transcript-command);
 }
