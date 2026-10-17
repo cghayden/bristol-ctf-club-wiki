@@ -30,7 +30,7 @@ jobs:
         run: npx quartz build
 
       - name: Deploy to server
-        uses: burnett01/rsync-deployments@9.0.1
+        uses: burnett01/rsync-deployments@9.0.2
         with:
           switches: -avz --delete
           path: public/
